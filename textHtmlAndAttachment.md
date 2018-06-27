@@ -1,0 +1,54 @@
+# Setup (after connecting to SMTP server)
+
+- `mail from: email@email.com`
+- `rcpt to: anotheremail@email.com`
+- `data`
+
+- Paste the following in
+
+From: "You" <email@email.com>
+To: "Me" <anotheremail@email.com>
+Subject:Your First Email From SMTP
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="mixed-section"
+
+--mixed-section
+Content-Type: multipart/alternative; boundary="alternative-section"
+
+--alternative-section
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+This is a plain text email
+
+--alternative-section
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<style type="text/css" media="screen">
+html {
+  font-family: sans-serif;
+}
+</style>
+<div>
+  <h1>This is a HTML email</h1>  
+</div>
+
+
+--alternative-section--
+
+--mixed-section
+Content-Type: text/plain; charset=us-ascii; name=email_attachment.txt
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename=email_attachment.txt
+
+This is a text attachment file!
+
+--mixed-section
+Content-Type:application/octet-stream;name="koala.jpg"
+Content-Transfer-Encoding:base64
+Content-Disposition:attachment;filename="koala.jpg"
+
+**base64 encoded**
+
+--mixed-section--
