@@ -7,40 +7,24 @@
 - Paste the following in
 
 From: "You" <email@email.com>
-
 To: "Me" <anotheremail@email.com>
-
 Subject:Your First Email From SMTP
-
 MIME-Version: 1.0
-
 Content-Type: multipart/mixed; boundary="mixed-section"
 
-
-
 --mixed-section
-
 Content-Type: multipart/alternative; boundary="alternative-section"
 
-
 --alternative-section
-
 Content-Type: text/plain; charset=us-ascii
-
 Content-Transfer-Encoding: 7bit
 
-
-
 This is a plain text email
-
-
 
 --alternative-section
 
 Content-Type: text/html; charset=us-ascii
-
 Content-Transfer-Encoding: 7bit
-
 
 <style type="text/css" media="screen">
 html {
