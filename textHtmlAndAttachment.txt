@@ -1,8 +1,8 @@
 # Setup (after connecting to SMTP server)
 
-- `mail from: email@email.com`
-- `rcpt to: anotheremail@email.com`
-- `data`
+mail from: email@email.com
+rcpt to: anotheremail@email.com
+data
 
 - Paste the following in
 
